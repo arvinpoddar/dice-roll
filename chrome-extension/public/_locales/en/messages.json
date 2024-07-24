@@ -1,0 +1,10 @@
+{
+  "extensionDescription": {
+    "description": "Dice Roll",
+    "message": "Generate randomized, human readable strings for naming test data"
+  },
+  "extensionName": {
+    "description": "Generate randomized, human readable strings for naming test data",
+    "message": "Dice Roll"
+  }
+}
