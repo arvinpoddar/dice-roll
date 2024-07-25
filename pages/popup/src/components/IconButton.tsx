@@ -10,7 +10,8 @@ export function IconButton({ icon, className, ...rest }: Props & ComponentPropsW
   return (
     <button
       className={clsx(
-        'px-4 py-2 bg-indigo-600  rounded text-xs',
+        'px-4 py-2 bg-indigo-600 rounded text-xs cursor-pointer',
+        'hover:bg-indigo-500 active:bg-indigo-500 transition',
         'disabled:bg-indigo-700 disabled:cursor-not-allowed',
         className,
       )}

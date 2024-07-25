@@ -2,9 +2,10 @@ import { useStorageSuspense, withErrorBoundary, withSuspense } from '@extension/
 import { schemaStorage } from '@extension/storage';
 import { Traits, createRandom, getRandomFromArray } from './get-random';
 import { useEffect, useRef, useState } from 'react';
-import { RefreshCcw, Plus, Minus } from 'lucide-react';
+import { Plus, Minus } from 'lucide-react';
 import { IconButton } from './components/IconButton';
 import { CopyButton } from './components/CopyButton';
+import { RefreshButton } from './components/RefreshButton';
 import { Input } from './components/Input';
 
 const traitOptions = Object.values(Traits);
@@ -72,7 +73,7 @@ function PopupRoot() {
           readOnly
         />
         <CopyButton copyText={random} />
-        <IconButton icon={<RefreshCcw size={16} />} onClick={() => setSchema(schema.slice())} />
+        <RefreshButton onClick={() => setSchema(schema.slice())} />
       </div>
 
       <div className="h-px my-5 bg-gray-600 dark:bg-gray-600 border-0" />
@@ -81,7 +82,7 @@ function PopupRoot() {
         <div className="flex-1 grid grid-cols-3 grid-rows-2 gap-2">
           {schema.map((trait, index) => (
             <select
-              className="text-gray-200 text-sm p-2 rounded bg-slate-600"
+              className="text-gray-200 text-sm p-2 cursor-pointer rounded bg-slate-600"
               key={index}
               value={trait}
               onChange={e => setTrait(index, e.target.value)}>
