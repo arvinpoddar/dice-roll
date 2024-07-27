@@ -1,6 +1,6 @@
 import { useStorageSuspense, withErrorBoundary, withSuspense } from '@extension/shared';
 import { schemaStorage } from '@extension/storage';
-import { Traits, createRandom, getRandomFromArray } from '@extension/shared/lib/get-random';
+import { Traits, createRandom, getRandomFromArray, DEFAULT_SCHEMA } from '@extension/shared/lib/get-random';
 import { useEffect, useRef, useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 import { IconButton } from './components/IconButton';
@@ -10,7 +10,6 @@ import { Input } from './components/Input';
 
 const traitOptions = Object.values(Traits);
 
-const DEFAULT_SCHEMA = [Traits.Adjective, Traits.Figure];
 const MIN_SCHEMA_LENGTH = 1;
 const MAX_SCHEMA_LENGTH = 6;
 

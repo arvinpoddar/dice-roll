@@ -1,6 +1,6 @@
 import 'webextension-polyfill';
 import { schemaStorage } from '@extension/storage';
-import { createRandom } from '@extension/shared';
+import { DEFAULT_SCHEMA, createRandom } from '@extension/shared';
 
 const INSERT_CONTEXT_MENU_ID = 'dice-roll-context-menu-insert';
 
@@ -16,7 +16,10 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
 
   const savedSchema = await schemaStorage.get();
   const { delimiter = '-', schema, suffix = '', prefix = '' } = savedSchema;
-  const res = createRandom(schema, { delimiter, prefix, suffix });
+
+  const filledSchema = schema.length > 0 ? schema : DEFAULT_SCHEMA;
+
+  const res = createRandom(filledSchema, { delimiter, prefix, suffix });
 
   chrome.scripting.executeScript({
     target: { tabId: tab.id, allFrames: true },

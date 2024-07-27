@@ -44,4 +44,6 @@ export const createRandom = (schema: string[], { delimiter = '-', prefix = '', s
   return `${prefix}${result}${suffix}`;
 };
 
+export const DEFAULT_SCHEMA = [Traits.Adjective, Traits.Figure];
+
 export { getRandomFromArray };
