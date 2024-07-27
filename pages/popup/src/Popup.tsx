@@ -1,6 +1,6 @@
 import { useStorageSuspense, withErrorBoundary, withSuspense } from '@extension/shared';
 import { schemaStorage } from '@extension/storage';
-import { Traits, createRandom, getRandomFromArray } from './get-random';
+import { Traits, createRandom, getRandomFromArray } from '@extension/shared/lib/get-random';
 import { useEffect, useRef, useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 import { IconButton } from './components/IconButton';

@@ -23,8 +23,7 @@
     "@types/node": "^20.14.10",
     "@types/uuid": "^10.0.0",
     "clsx": "^2.1.1",
-    "lucide-react": "^0.412.0",
-    "uuid": "^10.0.0"
+    "lucide-react": "^0.412.0"
   },
   "devDependencies": {
     "@extension/tailwindcss-config": "workspace:*",
