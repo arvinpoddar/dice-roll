@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@extension/storage": "workspace:*",
-    "@extension/tsconfig": "workspace:*"
+    "@extension/tsconfig": "workspace:*",
+    "@types/uuid": "^10.0.0"
   }
 }
