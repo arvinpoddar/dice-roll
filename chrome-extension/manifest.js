@@ -30,6 +30,16 @@ const manifest = deepmerge(
       default_popup: 'popup/index.html',
       default_icon: 'icon-34.png',
     },
+    commands: {
+      'command-copy-random-string': {
+        description: 'Copy a random string to clipboard',
+        suggested_key: 'Shift+Alt+C',
+      },
+      'command-insert-random-string': {
+        description: 'Insert a random string to the currently active input',
+        suggested_key: 'Ctrl+Shift+V',
+      },
+    },
     icons: {
       128: 'icon-128.png',
       16: 'icon-16.png',
