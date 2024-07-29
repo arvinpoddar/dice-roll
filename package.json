@@ -1,6 +1,6 @@
 {
   "name": "dice-roll",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Generate randomized, human readable strings for naming test data",
   "license": "MIT",
   "repository": {
