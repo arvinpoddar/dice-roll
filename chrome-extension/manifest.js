@@ -33,11 +33,11 @@ const manifest = deepmerge(
     commands: {
       'command-copy-random-string': {
         description: 'Copy a random string to clipboard',
-        suggested_key: 'Shift+Alt+C',
+        suggested_key: 'Ctrl+Shift+Y',
       },
       'command-insert-random-string': {
         description: 'Insert a random string to the currently active input',
-        suggested_key: 'Ctrl+Shift+V',
+        suggested_key: 'Ctrl+Shift+U',
       },
     },
     icons: {
